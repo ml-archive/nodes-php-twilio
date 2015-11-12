@@ -28,6 +28,6 @@ class Exception extends NodesException
             $message .= sprintf(' More info: %s', $data->more_info);
         }
 
-        parent::__construct($message, $data->status, null, false);
+        parent::__construct($message, $data->status, null, [], false);
     }
 }
