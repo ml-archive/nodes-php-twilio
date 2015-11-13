@@ -20,12 +20,11 @@ class ServiceProvider extends NodesAbstractServiceProvider
      */
     public function register()
     {
+        parent::register();
+
         // Register and bind
         $this->registerClient();
         $this->setupBindings();
-
-        // Load helpers
-        $this->loadHelpers(__DIR__ . '/Support/Helpers/');
     }
 
     /**
