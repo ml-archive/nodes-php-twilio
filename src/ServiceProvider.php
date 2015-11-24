@@ -62,7 +62,7 @@ class ServiceProvider extends NodesAbstractServiceProvider
     public function setupBindings()
     {
         // Scan resource directory
-        $resources = scandir(sprintf('%s/Resource', __DIR__));
+        $resources = scandir(sprintf('%s/Resources', __DIR__));
         $resources = array_slice($resources, 2);
 
         // Remove abstract resource from list
@@ -71,10 +71,10 @@ class ServiceProvider extends NodesAbstractServiceProvider
         // Bind found resources with Twilio client
         foreach ($resources as $resource) {
             // Generate resource namespace
-            $resource = sprintf('Nodes\Service\Twilio\Resource\%s', substr($resource, 0, strrpos($resource, '.')));
+            $resource = sprintf('Nodes\Service\Twilio\Resources\%s', substr($resource, 0, strrpos($resource, '.')));
 
             // Bind resource with Twilio client
-            $this->app->bind(sprintf('Nodes\Service\Twilio\Resource\%s', $resource), function($app) use ($resource) {
+            $this->app->bind(sprintf('Nodes\Service\Twilio\Resources\%s', $resource), function($app) use ($resource) {
                 return new $resource($app['nodes.services.twilio']);
             });
         }
