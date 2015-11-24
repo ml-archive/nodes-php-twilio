@@ -2,7 +2,6 @@
 namespace Nodes\Service\Twilio;
 
 use GuzzleHttp\Client as GuzzleClient;
-use Nodes\Service\Twilio\Resource\SmsMessage;
 
 /**
  * Class Client

@@ -1,5 +1,5 @@
 <?php
-namespace Nodes\Service\Twilio\Resource;
+namespace Nodes\Service\Twilio\Resources;
 
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Psr7\Request;
@@ -11,7 +11,7 @@ use Nodes\Service\Twilio\Exception\UnknownResourceException;
  * Class AbstractResource
  *
  * @abstract
- * @package Nodes\Service\Twilio\Resource
+ * @package Nodes\Service\Twilio\Resources
  */
 abstract class AbstractResource
 {

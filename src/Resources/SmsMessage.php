@@ -1,12 +1,12 @@
 <?php
-namespace Nodes\Service\Twilio\Resource;
+namespace Nodes\Service\Twilio\Resources;
 
 use GuzzleHttp\Psr7\Request;
 
 /**
  * Class SmsMessage
  *
- * @package Nodes\Service\Twilio\Resource
+ * @package Nodes\Service\Twilio\Resources
  */
 class SmsMessage extends AbstractResource
 {

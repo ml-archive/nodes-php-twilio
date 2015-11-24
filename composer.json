@@ -26,7 +26,7 @@
             "Nodes\\Service\\Twilio\\": "src"
         },
         "files": [
-            "src/Support/Helper/SMS.php"
+            "src/Support/Helpers/SMS.php"
         ]
     },
     "minimum-stability": "stable"

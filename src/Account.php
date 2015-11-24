@@ -384,7 +384,6 @@ class Account
      * @param  string $name
      * @param  string $value
      * @return void
-     * @throws \Nodes\Service\Twilio\Exception\InvalidAccountParameterException
      */
     public function __set($name, $value)
     {
