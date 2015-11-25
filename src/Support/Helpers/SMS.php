@@ -15,7 +15,7 @@ if (!function_exists('twilio_sms')) {
     function twilio_sms($to, $body, $from = null)
     {
         // Twilio SMS Message
-        $sms = app('Nodes\Service\Twilio\Resource\SmsMessage');
+        $sms = app('Nodes\Service\Twilio\Resources\SmsMessage');
 
         // Set 'to' and 'body' of SMS message
         $sms->setToNumber($to)
