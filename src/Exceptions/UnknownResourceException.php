@@ -1,7 +1,7 @@
 <?php
 namespace Nodes\Service\Twilio\Exception;
 
-use Nodes\Exception\Exception as NodesException;
+use Nodes\Exceptions\Exception as NodesException;
 
 /**
  * Class UnknownResourceException
@@ -16,14 +16,13 @@ class UnknownResourceException extends NodesException
      * @author Morten Rugaard <moru@nodes.dk>
      *
      * @access public
-     * @param  string  $message        Error message
-     * @param  integer $statusCode     Status code
-     * @param  string  $statusMessage  Status code message
-     * @param  array   $headers        List of headers
-     * @param  boolean $report         Wether or not exception should be reported
+     * @param  string  $message  Error message
+     * @param  integer $code     Error code
+     * @param  array   $headers  List of headers
+     * @param  boolean $report   Whether or not exception should be reported
      */
-    public function __construct($message = 'Unknown resource', $statusCode = 400, $statusMessage = null, $headers = [], $report = false)
+    public function __construct($message = 'Unknown resource', $code = 400, $headers = [], $report = false)
     {
-        parent::__construct($message, $statusCode, $statusMessage, $report);
+        parent::__construct($message, $code, $headers, $report);
     }
 }

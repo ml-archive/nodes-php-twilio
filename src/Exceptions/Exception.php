@@ -1,7 +1,7 @@
 <?php
 namespace Nodes\Service\Twilio\Exception;
 
-use Nodes\Exception\Exception as NodesException;
+use Nodes\Exceptions\Exception as NodesException;
 
 /**
  * Class Exception
@@ -28,6 +28,6 @@ class Exception extends NodesException
             $message .= sprintf(' More info: %s', $data->more_info);
         }
 
-        parent::__construct($message, $data->status, null, [], false);
+        parent::__construct($message, $data->code, [], true);
     }
 }

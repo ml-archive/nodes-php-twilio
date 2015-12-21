@@ -89,7 +89,7 @@ abstract class AbstractResource
 
         // Validate resource
         if (empty($resources->{$resource})) {
-            throw new UnknownResourceException(sprintf('Unknown resource: %s', $resource));
+            throw (new UnknownResourceException(sprintf('Unknown resource: %s', $resource)))->setStatusCode(400);
         }
 
         return $resources->{$resource};
@@ -124,7 +124,6 @@ abstract class AbstractResource
 
             // Throw original exception
             throw new $e;
-
         }
 
         return $response;
