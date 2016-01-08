@@ -17,17 +17,16 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
+        "laravel/framework": "5.1.*||5.2.*",
         "nodes/core": "^0.1",
-        "guzzlehttp/guzzle": "~6.0.0"
+        "guzzlehttp/guzzle": "^6.1"
     },
     "autoload": {
         "psr-4": {
-            "Nodes\\Service\\Twilio\\": "src"
+            "Nodes\\Services\\Twilio\\": "src"
         },
         "files": [
             "src/Support/Helpers/SMS.php"
         ]
-    },
-    "minimum-stability": "stable"
+    }
 }
