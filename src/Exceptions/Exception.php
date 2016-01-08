@@ -1,12 +1,12 @@
 <?php
-namespace Nodes\Service\Twilio\Exception;
+namespace Nodes\Services\Twilio\Exception;
 
 use Nodes\Exceptions\Exception as NodesException;
 
 /**
  * Class Exception
  *
- * @package Nodes\Service\Twilio\Exception
+ * @package Nodes\Services\Twilio\Exception
  */
 class Exception extends NodesException
 {

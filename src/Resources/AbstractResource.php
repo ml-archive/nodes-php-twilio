@@ -1,24 +1,24 @@
 <?php
-namespace Nodes\Service\Twilio\Resources;
+namespace Nodes\Services\Twilio\Resources;
 
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Psr7\Request;
-use Nodes\Service\Twilio\Client;
-use Nodes\Service\Twilio\Exception\Exception as TwilioException;
-use Nodes\Service\Twilio\Exception\UnknownResourceException;
+use Nodes\Services\Twilio\Client;
+use Nodes\Services\Twilio\Exception\Exception as TwilioException;
+use Nodes\Services\Twilio\Exception\UnknownResourceException;
 
 /**
  * Class AbstractResource
  *
  * @abstract
- * @package Nodes\Service\Twilio\Resources
+ * @package Nodes\Services\Twilio\Resources
  */
 abstract class AbstractResource
 {
     /**
      * Authenticated account
      *
-     * @var \Nodes\Service\Twilio\Account
+     * @var \Nodes\Services\Twilio\Account
      */
     protected $account;
 
@@ -35,7 +35,7 @@ abstract class AbstractResource
      * @author Morten Rugaard <moru@nodes.dk>
      *
      * @access public
-     * @param \Nodes\Service\Twilio\Client $client
+     * @param \Nodes\Services\Twilio\Client $client
      */
     public function __construct(Client $client)
     {
@@ -52,7 +52,7 @@ abstract class AbstractResource
      * @author Morten Rugaard <moru@nodes.dk>
      *
      * @access public
-     * @return \Nodes\Service\Twilio\Account
+     * @return \Nodes\Services\Twilio\Account
      */
     public function getAccount()
     {
@@ -80,7 +80,7 @@ abstract class AbstractResource
      * @access public
      * @param  string $resource
      * @return string
-     * @throws \Nodes\Service\Twilio\Exception\UnknownResourceException
+     * @throws \Nodes\Services\Twilio\Exception\UnknownResourceException
      */
     public function getResourceUrl($resource)
     {
@@ -104,7 +104,7 @@ abstract class AbstractResource
      * @param  \GuzzleHttp\Psr7\Request $request
      * @param  array                    $parameters
      * @return \Psr\Http\Message\ResponseInterface
-     * @throws \Nodes\Service\Twilio\Exception\Exception
+     * @throws \Nodes\Services\Twilio\Exception\Exception
      * @throws \GuzzleHttp\Exception\ClientException
      */
     public function sendResource(Request $request, array $parameters = [])

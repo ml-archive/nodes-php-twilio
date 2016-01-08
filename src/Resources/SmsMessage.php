@@ -1,12 +1,12 @@
 <?php
-namespace Nodes\Service\Twilio\Resources;
+namespace Nodes\Services\Twilio\Resources;
 
 use GuzzleHttp\Psr7\Request;
 
 /**
  * Class SmsMessage
  *
- * @package Nodes\Service\Twilio\Resources
+ * @package Nodes\Services\Twilio\Resources
  */
 class SmsMessage extends AbstractResource
 {
@@ -46,7 +46,7 @@ class SmsMessage extends AbstractResource
      *
      * @access public
      * @param  string $to
-     * @return \Nodes\Service\Twilio\Resource\SmsMessage
+     * @return \Nodes\Services\Twilio\Resource\SmsMessage
      */
     public function setToNumber($to)
     {
@@ -74,7 +74,7 @@ class SmsMessage extends AbstractResource
      *
      * @access public
      * @param  string $from
-     * @return \Nodes\Service\Twilio\Resource\SmsMessage
+     * @return \Nodes\Services\Twilio\Resource\SmsMessage
      */
     public function setFromNumber($from)
     {
@@ -106,7 +106,7 @@ class SmsMessage extends AbstractResource
      *
      * @access public
      * @param  string $body
-     * @return \Nodes\Service\Twilio\Resource\SmsMessage
+     * @return \Nodes\Services\Twilio\Resource\SmsMessage
      */
     public function setMessage($body)
     {
@@ -134,7 +134,7 @@ class SmsMessage extends AbstractResource
      *
      * @access public
      * @return boolean
-     * @throws \Nodes\Service\Twilio\Exception\Exception
+     * @throws \Nodes\Services\Twilio\Exception\Exception
      * @throws \GuzzleHttp\Exception\ClientException
      */
     public function send()

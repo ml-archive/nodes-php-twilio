@@ -1,12 +1,12 @@
 <?php
-namespace Nodes\Service\Twilio\Exception;
+namespace Nodes\Services\Twilio\Exception;
 
 use Nodes\Exceptions\Exception as NodesException;
 
 /**
  * Class UnknownResourceException
  *
- * @package Nodes\Service\Twilio\Exception
+ * @package Nodes\Services\Twilio\Exception
  */
 class UnknownResourceException extends NodesException
 {

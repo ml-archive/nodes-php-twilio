@@ -1,12 +1,12 @@
 <?php
-namespace Nodes\Service\Twilio;
+namespace Nodes\Services\Twilio;
 
 use Carbon\Carbon;
 
 /**
  * Class Account
  *
- * @package Nodes\Service\Twilio
+ * @package Nodes\Services\Twilio
  */
 class Account
 {
@@ -102,7 +102,7 @@ class Account
      *
      * @access protected
      * @param  string $sid
-     * @return \Nodes\Service\Twilio\Account
+     * @return \Nodes\Services\Twilio\Account
      */
     protected function setSid($sid)
     {
@@ -130,7 +130,7 @@ class Account
      *
      * @access protected
      * @param  string $ownerSid
-     * @return \Nodes\Service\Twilio\Account
+     * @return \Nodes\Services\Twilio\Account
      */
     protected function setOwnerAccountSid($ownerSid)
     {
@@ -158,7 +158,7 @@ class Account
      *
      * @access protected
      * @param  string $name
-     * @return \Nodes\Service\Twilio\Account
+     * @return \Nodes\Services\Twilio\Account
      */
     protected function setFriendlyName($name)
     {
@@ -186,7 +186,7 @@ class Account
      *
      * @access protected
      * @param  string $token
-     * @return \Nodes\Service\Twilio\Account
+     * @return \Nodes\Services\Twilio\Account
      */
     protected function setAuthToken($token)
     {
@@ -214,7 +214,7 @@ class Account
      *
      * @access protected
      * @param  string $status
-     * @return \Nodes\Service\Twilio\Account
+     * @return \Nodes\Services\Twilio\Account
      */
     protected function setStatus($status)
     {
@@ -242,7 +242,7 @@ class Account
      *
      * @access protected
      * @param  string $dateCreated
-     * @return \Nodes\Service\Twilio\Account
+     * @return \Nodes\Services\Twilio\Account
      */
     protected function setDateCreated($dateCreated)
     {
@@ -270,7 +270,7 @@ class Account
      *
      * @access protected
      * @param  string $dateUpdated
-     * @return \Nodes\Service\Twilio\Account
+     * @return \Nodes\Services\Twilio\Account
      */
     protected function setDateUpdated($dateUpdated)
     {
@@ -298,7 +298,7 @@ class Account
      *
      * @access protected
      * @param  string $type
-     * @return \Nodes\Service\Twilio\Account
+     * @return \Nodes\Services\Twilio\Account
      */
     protected function setType($type)
     {
@@ -326,7 +326,7 @@ class Account
      *
      * @access protected
      * @param  string $uri
-     * @return \Nodes\Service\Twilio\Account
+     * @return \Nodes\Services\Twilio\Account
      */
     protected function setUri($uri)
     {
@@ -354,7 +354,7 @@ class Account
      *
      * @access protected
      * @param  array $subresources
-     * @return \Nodes\Service\Twilio\Account
+     * @return \Nodes\Services\Twilio\Account
      */
     protected function setSubresourceUris($subresources)
     {

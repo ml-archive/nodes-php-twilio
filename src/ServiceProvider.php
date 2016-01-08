@@ -1,12 +1,12 @@
 <?php
-namespace Nodes\Service\Twilio;
+namespace Nodes\Services\Twilio;
 
 use Nodes\AbstractServiceProvider as NodesAbstractServiceProvider;
 
 /**
  * Class ServiceProvider
  *
- * @package Nodes\Service\Twilio
+ * @package Nodes\Services\Twilio
  */
 class ServiceProvider extends NodesAbstractServiceProvider
 {
@@ -46,7 +46,7 @@ class ServiceProvider extends NodesAbstractServiceProvider
             );
         });
 
-        $this->app->bind('Nodes\Service\Twilio\Client', function ($app) {
+        $this->app->bind('Nodes\Services\Twilio\Client', function ($app) {
             return $app['nodes.services.twilio'];
         });
     }
@@ -71,10 +71,10 @@ class ServiceProvider extends NodesAbstractServiceProvider
         // Bind found resources with Twilio client
         foreach ($resources as $resource) {
             // Generate resource namespace
-            $resource = sprintf('Nodes\Service\Twilio\Resources\%s', substr($resource, 0, strrpos($resource, '.')));
+            $resource = sprintf('Nodes\Services\Twilio\Resources\%s', substr($resource, 0, strrpos($resource, '.')));
 
             // Bind resource with Twilio client
-            $this->app->bind(sprintf('Nodes\Service\Twilio\Resources\%s', $resource), function($app) use ($resource) {
+            $this->app->bind(sprintf('Nodes\Services\Twilio\Resources\%s', $resource), function($app) use ($resource) {
                 return new $resource($app['nodes.services.twilio']);
             });
         }

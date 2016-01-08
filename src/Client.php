@@ -1,12 +1,12 @@
 <?php
-namespace Nodes\Service\Twilio;
+namespace Nodes\Services\Twilio;
 
 use GuzzleHttp\Client as GuzzleClient;
 
 /**
  * Class Client
  *
- * @package Nodes\Service\Twilio
+ * @package Nodes\Services\Twilio
  */
 class Client
 {
@@ -29,7 +29,7 @@ class Client
     /**
      * Authenticated account
      *
-     * @var \Nodes\Service\Twilio\Account
+     * @var \Nodes\Services\Twilio\Account
      */
     protected $account;
 
@@ -102,7 +102,7 @@ class Client
      * @author Morten Rugaard <moru@nodes.dk>
      *
      * @access public
-     * @return \Nodes\Service\Twilio\Account
+     * @return \Nodes\Services\Twilio\Account
      */
     public function getAccount()
     {

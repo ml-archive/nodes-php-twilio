@@ -9,13 +9,13 @@ if (!function_exists('twilio_sms')) {
      * @param  string $body
      * @param  string $from
      * @return boolean
-     * @throws \Nodes\Service\Twilio\Exception\Exception
+     * @throws \Nodes\Services\Twilio\Exception\Exception
      * @throws \GuzzleHttp\Exception\ClientException
      */
     function twilio_sms($to, $body, $from = null)
     {
         // Twilio SMS Message
-        $sms = app('Nodes\Service\Twilio\Resources\SmsMessage');
+        $sms = app('Nodes\Services\Twilio\Resources\SmsMessage');
 
         // Set 'to' and 'body' of SMS message
         $sms->setToNumber($to)
