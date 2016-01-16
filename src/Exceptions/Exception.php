@@ -1,5 +1,5 @@
 <?php
-namespace Nodes\Services\Twilio\Exception;
+namespace Nodes\Services\Twilio\Exceptions;
 
 use Nodes\Exceptions\Exception as NodesException;
 
