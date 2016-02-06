@@ -1,15 +1,31 @@
 <?php
 namespace Nodes\Services\Twilio;
 
-use Nodes\AbstractServiceProvider as NodesAbstractServiceProvider;
+use Nodes\AbstractServiceProvider;
 
 /**
  * Class ServiceProvider
  *
  * @package Nodes\Services\Twilio
  */
-class ServiceProvider extends NodesAbstractServiceProvider
+class ServiceProvider extends AbstractServiceProvider
 {
+    /**
+     * Package name
+     *
+     * @var string
+     */
+    protected $package = 'twilio';
+
+    /**
+     * Array of configs to copy
+     *
+     * @var array
+     */
+    protected $configs = [
+        'config/twilio.php' => 'config/nodes/services/twilio.php'
+    ];
+
     /**
      * Register the service provider.
      *
@@ -79,5 +95,16 @@ class ServiceProvider extends NodesAbstractServiceProvider
             });
         }
     }
-
+    /**
+     * Get the services provided by the provider
+     *
+     * @author Morten Rugaard <moru@nodes.dk>
+     *
+     * @access public
+     * @return array
+     */
+    public function provides()
+    {
+        return ['nodes.services.twilio'];
+    }
 }
