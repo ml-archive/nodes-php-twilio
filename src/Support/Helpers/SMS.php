@@ -9,7 +9,7 @@ if (!function_exists('twilio_sms')) {
      * @param  string $body
      * @param  string $from
      * @return boolean
-     * @throws \Nodes\Services\Twilio\Exception\Exception
+     * @throws \Nodes\Services\Twilio\Exceptions\Exception
      * @throws \GuzzleHttp\Exception\ClientException
      */
     function twilio_sms($to, $body, $from = null)

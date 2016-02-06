@@ -4,8 +4,8 @@ namespace Nodes\Services\Twilio\Resources;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Psr7\Request;
 use Nodes\Services\Twilio\Client;
-use Nodes\Services\Twilio\Exception\Exception as TwilioException;
-use Nodes\Services\Twilio\Exception\UnknownResourceException;
+use Nodes\Services\Twilio\Exceptions\Exception as TwilioException;
+use Nodes\Services\Twilio\Exceptions\UnknownResourceException;
 
 /**
  * Class AbstractResource
