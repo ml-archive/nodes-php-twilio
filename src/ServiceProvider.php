@@ -1,30 +1,29 @@
 <?php
 namespace Nodes\Services\Twilio;
 
-use Nodes\AbstractServiceProvider;
+use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
 /**
  * Class ServiceProvider
  *
  * @package Nodes\Services\Twilio
  */
-class ServiceProvider extends AbstractServiceProvider
+class ServiceProvider extends IlluminateServiceProvider
 {
     /**
-     * Package name
+     * Boot the service provider
      *
-     * @var string
+     * @author Morten Rugaard <moru@nodes.dk>
+     *
+     * @access public
+     * @return void
      */
-    protected $package = 'twilio';
+    public function boot()
+    {
+        parent::boot();
 
-    /**
-     * Array of configs to copy
-     *
-     * @var array
-     */
-    protected $configs = [
-        'config/twilio.php' => 'config/nodes/services/twilio.php'
-    ];
+        $this->publishGroups();
+    }
 
     /**
      * Register the service provider.
@@ -36,11 +35,24 @@ class ServiceProvider extends AbstractServiceProvider
      */
     public function register()
     {
-        parent::register();
-
-        // Register and bind
         $this->registerClient();
         $this->setupBindings();
+    }
+
+    /**
+     * Register publish groups
+     *
+     * @author Morten Rugaard <moru@nodes.dk>
+     *
+     * @access protected
+     * @return void
+     */
+    protected function publishGroups()
+    {
+        // Config files
+        $this->publishes([
+            __DIR__ . '/../config/twilio.php' => config_path('nodes/services/twilio.php'),
+        ], 'config');
     }
 
     /**
