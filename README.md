@@ -1,6 +1,6 @@
 ## Twilio
 
-Send text messages with (Twilio)[http://twilio.com] from your application
+Send text messages with [Twilio](http://twilio.com) from your application
 
 [![Total downloads](https://img.shields.io/packagist/dt/nodes/twilio.svg)](https://packagist.org/packages/nodes/twilio)
 [![Monthly downloads](https://img.shields.io/packagist/dm/nodes/twilio.svg)](https://packagist.org/packages/nodes/twilio)
@@ -13,7 +13,7 @@ Send text messages with (Twilio)[http://twilio.com] from your application
 
 ## 📝 Introduction
 
-Integrates the (Twilio)[http://twilio.com] service, which makes it unbelieable easy to send text messages from your application.
+Integrates the [Twilio](http://twilio.com) service, which makes it unbelieable easy to send text messages from your application.
 
 ## 📦 Installation
 
