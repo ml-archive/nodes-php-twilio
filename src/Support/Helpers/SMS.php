@@ -1,10 +1,11 @@
 <?php
+use Nodes\Services\Twilio\Resources\SmsMessage;
+
 if (!function_exists('twilio_sms')) {
     /**
      * Send a SMS message with Twilio
      *
      * @author Morten Rugaard <moru@nodes.dk>
-     *
      * @param  string $to
      * @param  string $body
      * @param  string $from
@@ -14,8 +15,8 @@ if (!function_exists('twilio_sms')) {
      */
     function twilio_sms($to, $body, $from = null)
     {
-        // Twilio SMS Message
-        $sms = app('Nodes\Services\Twilio\Resources\SmsMessage');
+        /** @var SmsMessage $sms */
+        $sms = app(SmsMessage::class);
 
         // Set 'to' and 'body' of SMS message
         $sms->setToNumber($to)

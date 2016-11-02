@@ -28,7 +28,8 @@
             "Nodes\\Services\\Twilio\\": "src"
         },
         "files": [
-            "src/Support/Helpers/SMS.php"
+            "src/Support/Helpers/SMS.php",
+            "src/Support/Helpers/LookUp.php"
         ]
     }
 }
