@@ -2,7 +2,7 @@
 namespace Nodes\Services\Twilio\Resources;
 
 use GuzzleHttp\Psr7\Request;
-use Nodes\Services\Twilio\Exceptions\Exception;
+use Nodes\Exceptions\Exception;
 
 /**
  * Class LookUp
@@ -19,12 +19,12 @@ class LookUp extends AbstractResource
      * @param        $phoneNumber
      * @param string $type
      * @return bool
-     * @throws \Nodes\Services\Twilio\Exceptions\Exception
+     * @throws \Nodes\Exceptions\Exception
      */
     public function validate($phoneNumber, $type = 'all')
     {
         if (!in_array($type, ['all', 'mobile', 'landline'])) {
-            throw new Exception(sprintf('Type [%s] is not supported', $type));
+            throw new Exception(sprintf('Type [%s] is not supported', $type), 500);
         }
 
         $url = sprintf('https://lookups.twilio.com/v1/PhoneNumbers/%s?Type=carrier', $phoneNumber);
