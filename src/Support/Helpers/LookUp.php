@@ -8,8 +8,8 @@ if (!function_exists('twilio_look_up')) {
      *
      * @author Casper Rasmussen <cr@nodes.dk>
      * @access public
-     * @param        $phoneNumber
-     * @param string $type
+     * @param        string $phoneNumber
+     * @param string        $type
      * @return bool
      * @throws \Nodes\Services\Twilio\Exceptions\Exception
      */

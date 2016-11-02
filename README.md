@@ -61,6 +61,7 @@ php artisan vendor:publish --provider="Nodes\Services\Twilio\ServiceProvider" --
 
 ```php
 twilio_sms($to, $body, $from = null)
+twilio_look_up($phoneNumber, $type = 'all')
 ```
 
 ## 🏆 Credits
