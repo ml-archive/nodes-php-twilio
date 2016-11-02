@@ -11,7 +11,7 @@ if (!function_exists('twilio_look_up')) {
      * @param        string $phoneNumber
      * @param string        $type
      * @return bool
-     * @throws \Nodes\Services\Twilio\Exceptions\Exception
+     * @throws \Nodes\Exceptions\Exception
      */
     function twilio_look_up($phoneNumber, $type = 'all')
     {
