@@ -80,7 +80,7 @@ abstract class AbstractResource
      * @access public
      * @param  string $resource
      * @return string
-     * @throws \Nodes\Services\Twilio\Exception\UnknownResourceException
+     * @throws \Nodes\Services\Twilio\Exceptions\UnknownResourceException
      */
     public function getResourceUrl($resource)
     {
@@ -104,7 +104,7 @@ abstract class AbstractResource
      * @param  \GuzzleHttp\Psr7\Request $request
      * @param  array                    $parameters
      * @return \Psr\Http\Message\ResponseInterface
-     * @throws \Nodes\Services\Twilio\Exception\Exception
+     * @throws \Nodes\Services\Twilio\Exceptions\Exception
      * @throws \GuzzleHttp\Exception\ClientException
      */
     public function sendResource(Request $request, array $parameters = [])

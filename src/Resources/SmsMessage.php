@@ -46,7 +46,7 @@ class SmsMessage extends AbstractResource
      *
      * @access public
      * @param  string $to
-     * @return \Nodes\Services\Twilio\Resource\SmsMessage
+     * @return \Nodes\Services\Twilio\Resources\SmsMessage
      */
     public function setToNumber($to)
     {
@@ -74,7 +74,7 @@ class SmsMessage extends AbstractResource
      *
      * @access public
      * @param  string $from
-     * @return \Nodes\Services\Twilio\Resource\SmsMessage
+     * @return \Nodes\Services\Twilio\Resources\SmsMessage
      */
     public function setFromNumber($from)
     {
@@ -106,7 +106,7 @@ class SmsMessage extends AbstractResource
      *
      * @access public
      * @param  string $body
-     * @return \Nodes\Services\Twilio\Resource\SmsMessage
+     * @return \Nodes\Services\Twilio\Resources\SmsMessage
      */
     public function setMessage($body)
     {
@@ -134,7 +134,7 @@ class SmsMessage extends AbstractResource
      *
      * @access public
      * @return boolean
-     * @throws \Nodes\Services\Twilio\Exception\Exception
+     * @throws \Nodes\Services\Twilio\Exceptions\Exception
      * @throws \GuzzleHttp\Exception\ClientException
      */
     public function send()
