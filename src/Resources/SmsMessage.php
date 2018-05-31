@@ -16,7 +16,7 @@ class SmsMessage extends AbstractResource
      * @const
      * @var string
      */
-    const RESOURCE_NAME = 'sms_messages';
+    const RESOURCE_NAME = 'messages';
 
     /**
      * Number of recipient
