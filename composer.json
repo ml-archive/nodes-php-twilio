@@ -19,7 +19,7 @@
         }
     ],
     "require": {
-        "laravel/framework": "5.1.*||5.2.*||5.3.*||5.4.*||5.5.*",
+        "laravel/framework": "5.1.*||5.2.*||5.3.*||5.4.*||5.5.*||5.6.*||5.7.*||5.8.*",
         "nodes/core": "1.1.*",
         "guzzlehttp/guzzle": "^6.1"
     },
@@ -31,5 +31,12 @@
             "src/Support/Helpers/SMS.php",
             "src/Support/Helpers/LookUp.php"
         ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nodes\\Services\\Twilio\\ServiceProvider"
+            ]
+        }
     }
 }
